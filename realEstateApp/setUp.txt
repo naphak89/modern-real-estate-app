@@ -1,0 +1,43 @@
+1 setup tailwind
+2 icon pic and its setup in app.json
+3 import font and pics to assets
+
+4 edit tailwinf.config.js: 
+- add component to content in 
+- add fontFamily and color in extend
+
+5 edit _layout.tsx
+import { useFonts } from "expo-font";
+import { useEffect } from "react";
+import { hideAsync } from "expo-router/build/utils/splash";
+
+useEffect(() => {
+    if (fontsLoaded) {
+      SplashScreen.hideAsync();
+    }
+  }, [fontsLoaded]);
+
+  if (!fontsLoaded) return null;
+  return <Stack />;
+
+6
+const [fontsLoaded] = useFonts({
+    "Rubik-Bold": require("../assets/fonts/Rubik-Bold.ttf"),
+  });
+
+7 for image path typscript issue
+create file in root 
+image.d.ts (d= decoration)
+
+declare module "*.png"{
+    const value: any;
+    export default value;
+}
+
+8 hide header for each SplashScreen
+edit _layout.tsx
+
+9App write intrigation
+make .env.local
+EXPO_PUBLIC_APPWRITE_PROJECT_ID=projectID
+EXPO_PUBLIC_APPWRITE_ENDPOINT=https://cloud.appwrite.io/v1

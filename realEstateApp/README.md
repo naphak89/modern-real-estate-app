@@ -4,4 +4,4 @@
 This page is coming soon
 
 
-[![Watch the video]](https://raw.githubusercontent.com/naphak89/modern-real-estate-app/blob/main/realEstateApp/ReState-demo.mov)
+[![Watch the video]](https://raw.githubusercontent.com/naphak89/modern-real-estate-app/main/realEstateApp/ReState-demo.mov)
